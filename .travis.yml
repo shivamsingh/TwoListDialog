@@ -5,6 +5,16 @@ android:
     - build-tools-22.0.1
     - android-22
     - platform-tools
+    - extra-google-google_play_services
+    - extra-android-m2repository
+    - extra-android-support
+    - extra-google-m2repository
+
+jdk:
+  - oraclejdk7
+  - oraclejdk8
+
+script: ./gradlew check
 
 before_script:
   - chmod +x gradlew
