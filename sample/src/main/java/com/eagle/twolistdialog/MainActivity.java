@@ -39,6 +39,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     @Override
     public void onClick(View v) {
-        TwoListDialog dialog = TwoListDialog.builder(getSupportFragmentManager()).list1(new String[]{}).list2(new String[]{}).show();
+        TwoListDialog.builder(getSupportFragmentManager())
+                .list1(new String[]{})
+                .list2(new String[]{})
+                .show();
     }
 }

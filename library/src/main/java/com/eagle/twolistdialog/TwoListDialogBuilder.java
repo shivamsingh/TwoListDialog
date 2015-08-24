@@ -12,6 +12,8 @@ public class TwoListDialogBuilder {
     private String[] list1;
     private String[] list2;
     private FragmentManager supportFragmentManager;
+    private PositiveActionCallback positiveActionCallback;
+    private NegativeActionCallback negativeActionCallback;
 
     public TwoListDialogBuilder(FragmentManager supportFragmentManager) {
         this.supportFragmentManager = supportFragmentManager;
@@ -46,5 +48,43 @@ public class TwoListDialogBuilder {
     public TwoListDialogBuilder list2(String[] list2) {
         this.list2 = list2;
         return this;
+    }
+
+    public TwoListDialogBuilder positiveAction(PositiveActionCallback positiveActionCallback) {
+        this.positiveActionCallback = positiveActionCallback;
+        return this;
+    }
+
+    public TwoListDialogBuilder negativeAction(NegativeActionCallback negativeActionCallback) {
+        this.negativeActionCallback = negativeActionCallback;
+        return this;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public String getPositiveText() {
+        return positiveText;
+    }
+
+    public String getNegativeText() {
+        return negativeText;
+    }
+
+    public PositiveActionCallback getPositiveActionCallback() {
+        return positiveActionCallback;
+    }
+
+    public NegativeActionCallback getNegativeActionCallback() {
+        return negativeActionCallback;
+    }
+
+    public String[] getList1() {
+        return list1;
+    }
+
+    public String[] getList2() {
+        return list2;
     }
 }
